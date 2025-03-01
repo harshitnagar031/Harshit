@@ -147,12 +147,12 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* About Section Styles */
+
+/* About Section */
 .about-section {
-    background-color: #F8FAFC;
+    background-color: #fff;
     position: relative;
     overflow: hidden;
-    padding: 5rem 0;
 }
 
 .about-content {
@@ -160,44 +160,12 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 1.1rem;
-    color: #1E293B;
-    padding: 2.5rem;
+    color: #4A5568;
+    padding: 2rem;
     border-radius: 1rem;
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.about-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(96, 165, 250, 0.05), rgba(129, 140, 248, 0.05));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.about-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.about-content:hover::before {
-    opacity: 1;
-}
-
-.about-content p {
-    line-height: 1.8;
-    font-weight: 400;
-    margin: 0;
 }
 
 /* Skills Section */
@@ -225,27 +193,8 @@ body {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(to right, #60A5FA, #818CF8);
+    background: linear-gradient(to right, #4B5563, #9CA3AF);
     border-radius: 3px;
-    transition: width 0.3s ease;
-}
-
-.section-title:hover::after {
-    width: 100px;
-}
-
-
-.section-icon {
-    font-size: 2rem;
-    color: #4B5563;
-    opacity: 0.9;
-    margin-right: 0.5rem;
-}
-
-/* Add smooth transition for icon hover effect */
-.section-title:hover .section-icon {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
 }
 
 .skills-grid {
@@ -399,10 +348,6 @@ body {
         font-size: 2rem;
     }
 
-    .section-icon {
-        font-size: 1.75rem;
-    }
-
     .social-links {
         flex-direction: column;
         align-items: stretch;
@@ -494,16 +439,4 @@ section {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Animation for about section */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
