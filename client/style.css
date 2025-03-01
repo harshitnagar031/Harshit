@@ -149,7 +149,7 @@ body {
 
 /* About Section Styles */
 .about-section {
-    background-color: #fff;
+    background-color: #F8FAFC;
     position: relative;
     overflow: hidden;
     padding: 5rem 0;
@@ -160,15 +160,16 @@ body {
     margin: 0 auto;
     text-align: center;
     font-size: 1.1rem;
-    color: #4A5568;
+    color: #1E293B;
     padding: 2.5rem;
     border-radius: 1rem;
-    background: #fff;
+    background: #FFFFFF;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(226, 232, 240, 0.8);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .about-content::before {
@@ -178,9 +179,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(96, 165, 250, 0.1), rgba(129, 140, 248, 0.1));
+    background: linear-gradient(45deg, rgba(96, 165, 250, 0.05), rgba(129, 140, 248, 0.05));
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .about-content:hover {
@@ -190,6 +192,12 @@ body {
 
 .about-content:hover::before {
     opacity: 1;
+}
+
+.about-content p {
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 0;
 }
 
 /* Skills Section */
