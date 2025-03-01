@@ -41,7 +41,7 @@ h3 {
 
 /* Sections */
 section {
-    padding: 6rem 0;
+    padding: 5rem 0;
 }
 
 /* Hero Section */
@@ -114,7 +114,7 @@ section {
 
 /* Skills Section */
 .skills-section {
-    background-color: #F7FAFC;
+    background-color: #fff;
 }
 
 .skills-grid {
@@ -161,7 +161,7 @@ section {
 
 /* Projects Section */
 .projects-section {
-    background-color: #fff;
+    background-color: #F7FAFC;
 }
 
 .section-title {
@@ -251,6 +251,19 @@ section {
     color: #fff;
     border-color: #0077B5;
 }
+
+/* Add email button styles */
+.button-email {
+    color: #38A169;
+    border-color: #38A169;
+}
+
+.button-email:hover {
+    background: #38A169;
+    color: #fff;
+    border-color: #38A169;
+}
+
 
 /* Animations */
 @keyframes loading {
