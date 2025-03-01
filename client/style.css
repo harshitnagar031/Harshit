@@ -93,6 +93,7 @@ body {
     margin-bottom: 3rem;
 }
 
+/* Button Styles */
 .button {
     display: inline-flex;
     align-items: center;
@@ -103,52 +104,49 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: #E2E8F0;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .button i {
     margin-right: 0.75rem;
     font-size: 1.125rem;
+    position: relative;
+    z-index: 2;
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
 }
 
 .button:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.button-github {
-    background: rgba(45, 55, 72, 0.5);
-    border-color: rgba(45, 55, 72, 0.6);
-}
-
-.button-github:hover {
-    background: #2D3748;
-    border-color: #2D3748;
-}
-
-.button-linkedin {
-    background: rgba(0, 119, 181, 0.5);
-    border-color: rgba(0, 119, 181, 0.6);
-}
-
-.button-linkedin:hover {
-    background: #0077B5;
-    border-color: #0077B5;
-}
-
-.button-email {
-    background: rgba(56, 161, 105, 0.5);
-    border-color: rgba(56, 161, 105, 0.6);
-}
-
-.button-email:hover {
-    background: #38A169;
-    border-color: #38A169;
-}
 
 /* About Section */
 .about-section {
@@ -176,26 +174,65 @@ body {
     position: relative;
 }
 
+/* Section Title Styles */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     color: #1E293B;
     position: relative;
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    padding: 0 2rem;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #60A5FA, #818CF8);
+    border-radius: 3px;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 40px;
     height: 3px;
-    background: linear-gradient(90deg, #60A5FA, #7C3AED, #EC4899);
+    background: linear-gradient(90deg, #818CF8, #C084FC);
     border-radius: 3px;
+}
+
+/* Additional decorative elements for section titles */
+.section-title span {
+    display: inline-block;
+    position: relative;
+}
+
+.section-title span::before,
+.section-title span::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #818CF8;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-title span::before {
+    left: -3rem;
+}
+
+.section-title span::after {
+    right: -3rem;
 }
 
 .skills-grid {
