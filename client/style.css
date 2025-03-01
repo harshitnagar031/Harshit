@@ -178,61 +178,23 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 4rem;
     color: #1E293B;
+    margin-bottom: 3rem;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 2rem;
-}
-
-.section-title::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background: linear-gradient(90deg, #60A5FA, #818CF8);
-    border-radius: 3px;
+    padding-bottom: 1rem;
+    font-weight: 700;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    right: 0;
-    width: 40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #818CF8, #C084FC);
+    background: linear-gradient(to right, #4B5563, #9CA3AF);
     border-radius: 3px;
-}
-
-/* Additional decorative elements for section titles */
-.section-title span {
-    display: inline-block;
-    position: relative;
-}
-
-.section-title span::before,
-.section-title span::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #818CF8;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.section-title span::before {
-    left: -3rem;
-}
-
-.section-title span::after {
-    right: -3rem;
 }
 
 .skills-grid {
@@ -324,7 +286,6 @@ body {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     border-color: #60A5FA;
 }
-
 
 /* Animations */
 @keyframes gradientMove {
@@ -456,12 +417,6 @@ section {
     background-size: 200% 100%;
     animation: loading 1.5s infinite;
     border-radius: 4px;
-}
-
-/* Add email button styles */
-.button-email {
-    color: #38A169;
-    border-color: #38A169;
 }
 
 /* Animations */
