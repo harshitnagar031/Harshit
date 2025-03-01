@@ -61,21 +61,6 @@ function displayProjects(projects) {
     `).join('');
 }
 
-// Handle Contact Form
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const formData = {
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value
-    };
-
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    e.target.reset();
-});
-
 // Add smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -106,4 +91,19 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('section').forEach((section) => {
     observer.observe(section);
+});
+
+// Handle Contact Form
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = {
+        name: e.target.name.value,
+        email: e.target.email.value,
+        message: e.target.message.value
+    };
+
+    console.log('Form submitted:', formData);
+    alert('Thank you for your message! I will get back to you soon.');
+    e.target.reset();
 });
